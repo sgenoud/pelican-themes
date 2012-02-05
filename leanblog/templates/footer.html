@@ -6,7 +6,7 @@
     <span class='smallgray'>RSS feeds for <a clss='smallgray' href="{{ SITEURL }}/{{ FEED }}" >Entries</a>
         {% if DISQUS_SITENAME %}
         and <a
-            href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
+            href="http://{{ DISQUS_SITENAME }}.disqus.com/latest.rss">Comments</a>.
         {% endif %}
     </span>
 </div>

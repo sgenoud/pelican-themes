@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class='maintext'>
+{% for article in dates %}
+    <span class='list_text'><a href='{{ article.url }}'>{{ article.title }}</a></span>
+    <span class='smallgray list_date'>{{ article.date.strftime('%d %b %y')}}</span>
+{% endfor %}
+</div>
+{% endblock %}

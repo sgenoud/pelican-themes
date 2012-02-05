@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    {% include "head.html" %}
+  </head>
+  <body>
+    <div class="mainwrapper">
+        {% include "header.html" %}
+        <nav class="menu">
+
+        {% block menu_content %}{% endblock %}
+
+        <p style="margin-bottom: 3.2em"><span class="gray">
+            <a href="{{ SITEURL }}/archives.html">Archives by dates</a><br>
+            <a href="{{ SITEURL }}/categories.html">Archives by categories</a><br>
+        </span></p></nav>
+
+      <div class="text_block">
+        <div id="prose_block">
+            {% block content %}
+            {% endblock %}
+        </div><!-- End Prose Block -->
+      </div><!-- End Main Block -->
+      <div id="footer">
+        {% include "footer.html" %}
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>

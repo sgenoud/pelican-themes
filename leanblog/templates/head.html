@@ -1,0 +1,24 @@
+<title>{{ SITENAME }}</title>
+<link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+{% if FEED_RSS %}
+<link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+{% endif %}
+
+<link rel='stylesheet' href="{{ SITEURL }}/theme/css/tstyle.css" type='text/css' />
+<link rel='stylesheet' href="{{ SITEURL }}/theme/css/pygment.css" type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+{% if ENABLE_MATH %}
+<script type="text/x-mathjax-config">
+    // MathJax Configuration
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: {inlineMath: [["$","$"]]},
+        "HTML-CSS": {
+            scale: 80
+        }
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+{% endif %}

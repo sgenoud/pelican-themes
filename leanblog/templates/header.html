@@ -1,0 +1,13 @@
+<div class="maintitle">
+    <span class="maintitle">
+        <a href="{{ SITEURL }}">
+            {% block title %}{{ SITENAME }}{%endblock%}
+        </a>
+    </span>
+</div>
+{% if SITESUBTITLE %}
+   <div class="subtitle">
+        <span class="gray">{{ SITESUBTITLE }}</span>
+    </div>
+{% endif %}
+<hr/>

@@ -1,4 +1,6 @@
 <title>{{ SITENAME }}</title>
+<meta name="author" content="{{ AUTHOR }}">
+
 <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
 {% if FEED_RSS %}
 <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
@@ -6,7 +8,17 @@
 
 <link rel='stylesheet' href="{{ SITEURL }}/theme/css/pygment.css" type='text/css' />
 <link rel='stylesheet' href="{{ SITEURL }}/theme/css/tstyle.css" type='text/css' />
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+{% if GOOGLE_ANALYTICS %}
+<script>
+    var _gaq=[['_setAccount','{{GOOGLE_ANALYTICS}}'],['_trackPageview']];
+    (function(d,t){
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'))
+</script>
+{% endif %}
 
 {% if ENABLE_MATH %}
 <script type="text/x-mathjax-config">

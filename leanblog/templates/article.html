@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}        
-<section id="content" class="body">    
-<article>
 <div class="blog_post">
-    <header><div class="pagetitle"><span class='maintitle'>
+    <div class="pagetitle"><h3>
             <a href="{{article.url}}" rel="bookmark" title="Permanent Link to {{article.title}}">{{article.title}}</a>
-    </span></div></header>
+    </h3></div>
 
     <div class="maintext">
         {{ article.content }}
@@ -25,7 +23,6 @@
         {% endif %}
     </div>
 </div>
-</article></section>
 {% endblock %}
 
 {% block menu_content %}

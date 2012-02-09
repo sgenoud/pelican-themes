@@ -1,13 +1,8 @@
-<div class="maintitle">
-    <span class="maintitle">
-        <a href="{{ SITEURL }}">
-            {% block title %}{{ SITENAME }}{%endblock%}
-        </a>
-    </span>
+<div class="maintitle span-5 last">
+    <h2><a href="{{ SITEURL }}">{% block title %}{{ SITENAME }}{%endblock%}</a></h2>
 </div>
 {% if SITESUBTITLE %}
-   <div class="subtitle">
-        <span class="gray">{{ SITESUBTITLE }}</span>
+   <div class="subtitle span-5 last">
+       <h4><span class="gray">{{ SITESUBTITLE }}</span></h4>
     </div>
 {% endif %}
-<hr/>

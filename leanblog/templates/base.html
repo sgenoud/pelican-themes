@@ -6,24 +6,28 @@
     {% include "head.html" %}
   </head>
   <body>
-    <div class="mainwrapper">
-        {% include "header.html" %}
-        <nav class="menu">
+    <div class="mainwrapper container">
+        <div class='topspace span-24 last'></div>
 
-        {% block menu_content %}{% endblock %}
+        <div class="prepend-3 span-5">
+            {% include "header.html" %}
+            <div class="span-5 menu">
+                {% block menu_content %}{% endblock %}
+                <span class="gray">
+                    <a href="{{ SITEURL }}/archives.html">Archives by dates</a><br/>
+                    <a href="{{ SITEURL }}/categories.html">Archives by categories</a><br>
+            </span>
+        </div>
+        </div>
 
-        <p style="margin-bottom: 3.2em"><span class="gray">
-            <a href="{{ SITEURL }}/archives.html">Archives by dates</a><br>
-            <a href="{{ SITEURL }}/categories.html">Archives by categories</a><br>
-        </span></p></nav>
-
-      <div class="text_block">
-        <div id="prose_block">
+      <div class="text_block prepend-2 span-12 append-1 last">
+        <div id="prose_block" class='span-12'>
             {% block content %}
             {% endblock %}
         </div><!-- End Prose Block -->
-      </div><!-- End Main Block -->
-      <div id="footer">
+      </div><!-- End Text Block -->
+
+      <div class="footer prepend-5 span-14 postpend-5 last">
         {% include "footer.html" %}
       </div> <!-- End Footer -->
     </div> <!-- End Content -->
